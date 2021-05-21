@@ -71,7 +71,7 @@ describe('Check Yu Gi Oh', () => {
 
   it('should return a message if the passed parameter is not a valid number', () => {
     parameter = 'fizzbuzz is meh';
-    expectedResult = `invalid parameter: "${parameter}"`
+    expectedResult = `invalid parameter: ${parameter}`
 
     expect(checkYuGiOh(parameter)).toEqual(expectedResult);
   });

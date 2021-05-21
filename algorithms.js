@@ -22,8 +22,8 @@ const convertFahrToCelsius = (parameter) => {
 } 
 
 const checkYuGiOh = (parameter) => {
-  if (isNaN(parameter)) {
-    return `invalid parameter: "${parameter}"`
+  if (isNaN(parameter) || isNaN(parseInt(parameter, 10))) {
+    return `invalid parameter: ${parameter}`
   } else {
     let numToCheck = parseInt(parameter, 10);
     let arrayToReturn = [];
