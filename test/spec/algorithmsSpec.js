@@ -11,6 +11,14 @@ describe( 'Celcius converter', () => {
     expect(convertFahrToCelsius(parameter)).toBe(expectedResult);
   });
 
+  it('should print a message if the parameter is an empty string', () => {
+    parameter = ' ';
+    parameterType = 'string';
+    expectedResult = `'${parameter}' is not a valid number but a/an ${parameterType}.`;
+    
+    expect(convertFahrToCelsius(parameter)).toBe(expectedResult);
+  });
+
   it('should print a message indicating that the parameter is of type object and is not a valid number', () => {
     parameter = {"temp": 0};
     parameterType = 'object';

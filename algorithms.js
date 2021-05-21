@@ -5,7 +5,10 @@ const convertFahrToCelsius = (parameter) => {
   if (isNaN(parameter) && Array.isArray(parameter)) {
 
     return `${parameter} is not a valid number but a/an array.`;
-  } else if (isNaN(parameter)) {
+  } else if (typeof(parameter) == 'string' && parameter.toString().trim() == '') {
+
+    return `'${parameter}' is not a valid number but a/an ${typeof(parameter)}.`
+  } else if (isNaN(parameter) || isNaN(parseInt(parameter, 10))) {
     
     return `${parameter} is not a valid number but a/an ${typeof(parameter)}.`;
   } else {
